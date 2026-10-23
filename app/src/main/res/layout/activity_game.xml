@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView позволяет прокручивать экран, если все элементы не помещаются. match_parent занимает размер родителя; fillViewport заполняет доступную высоту. -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <!-- Вертикальный контейнер располагает элементы сверху вниз. wrap_content — размер по содержимому; padding — внутренние отступы; dp — единица размера интерфейса. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <!-- Номер текущего вопроса. Текст меняется в GameActivity.showQuestion(). -->
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Вопрос"
+            android:textSize="18sp" />
+        <!-- Горизонтальная полоса: max — число вопросов, progress — текущий номер. -->
+        <ProgressBar
+            android:id="@+id/questionProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!-- Здесь игровой экран показывает сумму очков. -->
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Очки: 0"
+            android:textSize="18sp" />
+        <!-- Здесь таймер показывает оставшееся время в секундах. -->
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Время: 20 с"
+            android:textSize="18sp" />
+        <!-- Картинка флага. fitCenter помещает её целиком с сохранением пропорций; 160dp — высота области. -->
+        <ImageView
+            android:id="@+id/flagImage"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Флаг страны" />
+        <!-- Кнопка варианта ответа 1. Название страны присваивается из Kotlin; после ответа кнопка отключается. -->
+        <Button
+            android:id="@+id/answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Ответ 1" />
+        <!-- Кнопка варианта ответа 2. Название страны присваивается из Kotlin; после ответа кнопка отключается. -->
+        <Button
+            android:id="@+id/answer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Ответ 2" />
+        <!-- Кнопка варианта ответа 3. Название страны присваивается из Kotlin; после ответа кнопка отключается. -->
+        <Button
+            android:id="@+id/answer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Ответ 3" />
+        <!-- Кнопка варианта ответа 4. Название страны присваивается из Kotlin; после ответа кнопка отключается. -->
+        <Button
+            android:id="@+id/answer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Ответ 4" />
+        <!-- Сообщение о правильном или неправильном ответе. Изначально пустое. -->
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text=""
+            android:textSize="18sp" />
+        <!-- После ответа эта кнопка открывает следующий вопрос либо итоговый экран. -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Следующий вопрос" />
+        <!-- Выход из текущей игры обратно в меню. -->
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Выйти в меню" />
+    </LinearLayout>
+</ScrollView>

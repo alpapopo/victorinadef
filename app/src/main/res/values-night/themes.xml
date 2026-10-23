@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Контейнер именованных ресурсов. Через R код обращается к строкам, цветам и другим ресурсам. -->
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Стиль темы. parent задаёт готовую тему, от которой наследуется оформление. Dark — тёмная, NoActionBar — без верхней панели заголовка. -->
+    <style
+        name="Base.Theme.Victorina"
+        parent="Theme.Material3.Dark.NoActionBar" />
+</resources>

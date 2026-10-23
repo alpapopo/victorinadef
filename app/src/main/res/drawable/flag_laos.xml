@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Векторный флаг. width/height — размер изображения; viewportWidth/viewportHeight задают систему координат для фигур внутри. -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#CE1126"
+        android:pathData="M0,0h300v200h-300z" />
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#002868"
+        android:pathData="M0,50h300v100h-300z" />
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M110,100a40,40 0,1 0,80,0a40,40 0,1 0,-80,0" />
+</vector>

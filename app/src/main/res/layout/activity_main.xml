@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView позволяет прокручивать экран, если все элементы не помещаются. match_parent занимает размер родителя; fillViewport заполняет доступную высоту. -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <!-- Вертикальный контейнер располагает элементы сверху вниз. wrap_content — размер по содержимому; padding — внутренние отступы; dp — единица размера интерфейса. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Угадай флаг"
+            android:textSize="24sp" />
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Континент"
+            android:textSize="18sp" />
+        <!-- Выбор континента. Пункты этого списка создаются в MainActivity. -->
+        <Spinner
+            android:id="@+id/continentSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp" />
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Количество вопросов"
+            android:textSize="18sp" />
+        <!-- Выбор 5, 10 или 15 вопросов. Из Kotlin читаем выбранную строку и преобразуем её в число. -->
+        <Spinner
+            android:id="@+id/countSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp" />
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Сложность"
+            android:textSize="18sp" />
+        <!-- Выбор сложности. Позиция 0/1/2 определяет набор из 4/6/8 стран на континент. -->
+        <Spinner
+            android:id="@+id/difficultySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp" />
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Легко — 4 страны на континент, средне — 6, сложно — 8. После полного круга страны повторяются."
+            android:textSize="16sp" />
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="На ответ — 20 секунд. Чем быстрее ответ, тем больше очков."
+            android:textSize="16sp" />
+        <!-- Кнопка запуска игры. Её обработчик находится в MainActivity. -->
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Начать игру" />
+        <!-- Кнопка открытия таблицы рекордов из меню. -->
+        <Button
+            android:id="@+id/recordsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Таблица рекордов" />
+    </LinearLayout>
+</ScrollView>

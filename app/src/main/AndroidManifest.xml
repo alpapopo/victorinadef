@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AndroidManifest описывает приложение и регистрирует его экраны. Это не расположение кнопок, а настройки для Android. -->
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Общие настройки: название, иконка, тема и резервное копирование приложения. -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Victorina">
+        <!-- Регистрируем экран .GameActivity. exported=false запрещает другим приложениям открывать его напрямую; у стартового экрана стоит true. -->
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+        <!-- Регистрируем экран .ResultActivity. exported=false запрещает другим приложениям открывать его напрямую; у стартового экрана стоит true. -->
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <!-- Регистрируем экран .RecordsActivity. exported=false запрещает другим приложениям открывать его напрямую; у стартового экрана стоит true. -->
+        <activity
+            android:name=".RecordsActivity"
+            android:exported="false" />
+        <!-- Регистрируем экран .MainActivity. exported=false запрещает другим приложениям открывать его напрямую; у стартового экрана стоит true. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Этот фильтр делает MainActivity стартовым экраном, который открывается по значку приложения. -->
+            <intent-filter>
+                <!-- MAIN обозначает точку входа в приложение. -->
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <!-- LAUNCHER добавляет приложение в список запускаемых по значку. -->
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

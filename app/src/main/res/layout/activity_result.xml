@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView позволяет прокручивать экран, если все элементы не помещаются. match_parent занимает размер родителя; fillViewport заполняет доступную высоту. -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <!-- Вертикальный контейнер располагает элементы сверху вниз. wrap_content — размер по содержимому; padding — внутренние отступы; dp — единица размера интерфейса. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Результат"
+            android:textSize="24sp" />
+        <!-- Текст итога: верные ответы, очки и процент. Заполняется в ResultActivity. -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text=""
+            android:textSize="18sp" />
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Результат автоматически сохранён в таблицу, если вошёл в десятку лучших."
+            android:textSize="16sp" />
+        <!-- Переход с итогового экрана к таблице рекордов. -->
+        <Button
+            android:id="@+id/resultRecordsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Таблица рекордов" />
+        <!-- Закрытие экрана результата и возврат в меню. -->
+        <Button
+            android:id="@+id/resultMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="В меню" />
+    </LinearLayout>
+</ScrollView>

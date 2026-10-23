@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Векторный флаг. width/height — размер изображения; viewportWidth/viewportHeight задают систему координат для фигур внутри. -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#003DA5"
+        android:pathData="M0,0h300v40.0h-300z" />
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,40.0h300v40.0h-300z" />
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#003DA5"
+        android:pathData="M0,80.0h300v40.0h-300z" />
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,120.0h300v40.0h-300z" />
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#003DA5"
+        android:pathData="M0,160.0h300v40.0h-300z" />
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#D71920"
+        android:pathData="M0,0L173.2,100L0,200z" />
+    <!-- Часть рисунка флага. fillColor — цвет в формате #RRGGBB; pathData — контур: M перемещает точку, L рисует отрезок, h/v — горизонталь/вертикаль, a — дугу, z замыкает фигуру. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M58.00,68.00L65.19,90.11L88.43,90.11L69.63,103.78L76.81,125.89L58.00,112.22L39.19,125.89L46.37,103.78L27.57,90.11L50.81,90.11z" />
+</vector>

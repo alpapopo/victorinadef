@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView позволяет прокручивать экран, если все элементы не помещаются. match_parent занимает размер родителя; fillViewport заполняет доступную высоту. -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <!-- Вертикальный контейнер располагает элементы сверху вниз. wrap_content — размер по содержимому; padding — внутренние отступы; dp — единица размера интерфейса. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <!-- Текстовая подпись. android:text задаёт текст, textSize — размер в sp, layout_marginBottom — отступ снизу. -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Таблица рекордов"
+            android:textSize="24sp" />
+        <!-- Возврат с экрана рекордов на предыдущий экран. -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Назад" />
+        <!-- Список рекордов в одном TextView. При длинном списке экран прокручивается. -->
+        <TextView
+            android:id="@+id/recordsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text=""
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>
